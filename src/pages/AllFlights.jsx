@@ -31,7 +31,7 @@ function AllFlights() {
             <h1>All Flights</h1>
             {flights.map((oneFlight) => (
                 <div key={oneFlight._id}>
-                    <h2>Flight Number: {oneFlight.flightNumber}</h2>
+                    <h2>Flight id: {oneFlight._id}</h2>
                     <h2>Airline: {oneFlight.airLine}</h2>
                     <p>From: {oneFlight.departure} → To: {oneFlight.destination}</p>
                     <p>Arrival: {oneFlight.arrival}</p>
