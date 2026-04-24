@@ -8,6 +8,8 @@ function Navbar({ user, setUser }) {
     setUser(null)
   }
 
+  
+
   return (
     <div>
       {/* Routes seen by everyone */}
