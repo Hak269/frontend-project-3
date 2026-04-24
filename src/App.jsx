@@ -4,7 +4,7 @@ import Homepage from './pages/Homepage';
 import SignUp from './pages/Signup';
 import SignIn from './pages/SignIn';
 import Navbar from './components/Navbar';
-import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/MyBooking';
 import AllFlights from './pages/AllFlights';
 import BookingDetails from './pages/BookingDetails';
 

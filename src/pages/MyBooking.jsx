@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 
-function Dashboard({ user }) {
+function MyBooking({ user }) {
   return (
     <div>
         <h1>Welcome {user.username}</h1>
@@ -8,4 +8,4 @@ function Dashboard({ user }) {
   )
 }
 
-export default Dashboard
+export default MyBooking
