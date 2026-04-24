@@ -1,0 +1,142 @@
+
+.flight-widget {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.flight-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.flight-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.page-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #dcdcde, #d3d3d3);
+  padding: 40px;
+}
+
+.top-nav {
+  background: rgb(51, 29, 131);
+  padding: 15px 25px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
+
+.top-nav span {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.login-btn {
+  background: #3d1dae;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.main-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.booking-card {
+  background: rgb(181, 180, 180);
+  border-radius: 25px;
+  padding: 40px;
+  max-width: 650px;
+  margin: auto;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.passenger-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.pill-input {
+  border-radius: 30px;
+  padding: 12px 15px;
+  border: none;
+  background: #dfdede;
+  outline: none;
+}
+
+.light-blue {
+  background: #dfdede;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.price-tag {
+  font-weight: bold;
+}
+
+.price-box {
+  background: #2a208f;
+  padding: 8px 15px;
+  border-radius: 15px;
+  margin-left: 10px;
+   color: rgb(0, 0, 0);
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  border: none;
+  padding: 12px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn.edit {
+  background: #2a208f;
+  color: rgb(0, 0, 0);
+}
+
+
+
+
+
