@@ -8,17 +8,16 @@ function Navbar({ user, setUser }) {
     setUser(null)
   }
 
-  
-
   return (
     <div>
       {/* Routes seen by everyone */}
       <Link className='nav-item' to='/'>Homepage</Link>
+      <Link className='nav-item' to='/flights'>All Flights</Link>
 
       {user ? (
         // Links for protected routes only for logged in users
         <>
-        <Link className='nav-item' to='/dashboard'>Dashboard</Link>
+        <Link className='nav-item' to='/dashboard'>My Bookings</Link>
 
         <span className='nav-item'>{user.username}</span>
        
