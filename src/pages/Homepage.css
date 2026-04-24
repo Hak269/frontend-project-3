@@ -1,0 +1,122 @@
+/* Main search widget container */
+#search-widget {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 30px;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Inner widget section */
+#search-inner-widget {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Travellers section */
+#search-inner-widget strong {  
+  font-size: 16px;
+  margin-right: 15px;
+  color: #333;
+}
+
+#search-inner-widget label {
+  font-size: 14px;
+  margin-right: 8px;
+  color: #555;
+}
+
+#search-inner-widget input {
+  width: 60px;
+  padding: 6px;
+  margin-right: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* From-To section */
+#from-to {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.from-to-child {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.from-to-child label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.from-to-child select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+/* Departure & Arrival section */
+
+#dep-arr {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.dep-arr-child {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dep-arr-child label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.dep-arr-child input[type="date"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Search button */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background: #0078d7;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #005fa3;
+}
+
+/* Optional: input & select focus states for better UX */
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #0078d7;
+  box-shadow: 0 0 4px rgba(0,120,215,0.4);
+}
