@@ -5,6 +5,7 @@ import SignUp from './pages/Signup';
 import SignIn from './pages/SignIn';
 import Navbar from './components/Navbar';
 import Dashboard from './pages/Dashboard';
+import AllFlights from './pages/AllFlights';
 import BookingDetails from './pages/BookingDetails';
 
 function App() {
@@ -30,6 +31,10 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route path="/sign-up" element={!user ? <SignUp /> : <Navigate to='/dashboard'/>} />
+        <Route path="/sign-in" element={!user ? <SignIn setUser={setUser} /> : <Navigate to='/dashboard'/>} />
+        <Route path="/dashboard" element={user ? <Dashboard user={user} /> : <Navigate to='/sign-in'/>} />
+        <Route path='/flights' element={<AllFlights/>} />
 
         <Route
           path="/sign-up"
