@@ -19,10 +19,13 @@ function Navbar({ user, setUser }) {
         <>
         <Link className='nav-item' to='/dashboard'>My Bookings</Link>
 
+          <Link className='nav-item' to='/booking'>Booking</Link>
+
         <span className='nav-item'>{user.username}</span>
        
         <button className='nav-item' onClick={logOut}>Log Out</button>
 
+      
 
         </>
       ) :
