@@ -1,15 +1,19 @@
 import  {useLocation, useParams} from 'react-router';
-import { Link } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 function SearchFlights(){
     const {state} = useLocation();
-    const {airport, destination} = useParams();
     const flights = state?.flights || [];
-   
+    const travellers = state?.travellers || {};
+    const navigate = useNavigate();
+    
+    function handleSelectFlight(oneFlight) {
+        navigate(`/booking`, { state: { flight: oneFlight, travellers } });
+    }
 
     return(
         <>
-        <h1>Flights from {airport} To {destination}</h1>
+        <h1>Flights</h1>
         {flights.map((oneFlight)=>{
    return <div key={oneFlight._id}>
                 <h2>{oneFlight.airLine}</h2>
@@ -18,7 +22,9 @@ function SearchFlights(){
                 <p>Arrival Time: <b>{oneFlight.arrival}</b></p>
 
                 <p>Price: ${oneFlight.price}</p>
-                <Link to={`/flights/${oneFlight._id}`} >Select Flight</Link>    
+                <button type="button" onClick={() => handleSelectFlight(oneFlight)}>
+                    Select Flight
+                </button>
             </div>
 
         })}

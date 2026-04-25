@@ -48,7 +48,7 @@ function Homepage() {
       console.log(filteredFlights)
       console.log(travellers)
 
-      navigate("/results", { state: { flights: filteredFlights, travellers: travellers } });
+      navigate("/filteredFlights", { state: { flights: filteredFlights, travellers: travellers } });
     }
 
     useEffect(()=>{

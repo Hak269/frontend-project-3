@@ -6,6 +6,7 @@ import SignIn from './pages/SignIn';
 import Navbar from './components/Navbar';
 import Dashboard from './pages/MyBooking';
 import AllFlights from './pages/AllFlights';
+import SearchFlights from './pages/SearchFlights';
 import BookingDetails from './pages/BookingDetails';
 
 function App() {
@@ -53,7 +54,12 @@ function App() {
 
         <Route
           path="/booking"
-          element={<BookingDetails />}
+          element={<BookingDetails user={user} />}
+        />
+
+        <Route
+          path="/filteredFlights"
+          element={<SearchFlights />}
         />
       </Routes>
     </div>
