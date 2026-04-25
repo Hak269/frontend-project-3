@@ -59,7 +59,7 @@ function App() {
 
         <Route
           path="/filteredFlights"
-          element={<SearchFlights />}
+          element={<SearchFlights user={user} />}
         />
       </Routes>
     </div>
