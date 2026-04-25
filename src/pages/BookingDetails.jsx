@@ -321,7 +321,7 @@ const BookingDetails = () => {
 
         </div>
 
-        <div style={{ marginTop: "15px", fontWeight: "bold", color: 'black' }}>
+        <div style={{ marginTop: "15px", fontWeight: "500", color: 'black' }}>
           {adultCount} Adults , {childCount} Children
         </div>
 
