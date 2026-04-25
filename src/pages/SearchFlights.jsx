@@ -1,14 +1,22 @@
 import  {useLocation, useParams} from 'react-router';
 import { useNavigate } from "react-router-dom";
 
-function SearchFlights(){
+function SearchFlights({user}){
     const {state} = useLocation();
     const flights = state?.flights || [];
     const travellers = state?.travellers || {};
     const navigate = useNavigate();
-    
+
     function handleSelectFlight(oneFlight) {
-        navigate(`/booking`, { state: { flight: oneFlight, travellers } });
+        console.log(user)
+        if (!user) {
+            alert("Please login first!");
+        }
+        else
+        {
+            navigate(`/booking`, { state: { flight: oneFlight, travellers } });
+
+        }
     }
 
     return(
