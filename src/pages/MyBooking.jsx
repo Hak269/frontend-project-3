@@ -99,6 +99,7 @@ function MyBooking({ user }) {
             <p>passenger: <b>{onebooking.passengerName}</b></p>
             <p>Airline: <b>{onebooking.flight?.airLine}</b></p>
             <p>Class: {onebooking.cabinClass}</p>
+            <p>Meal: {onebooking.mealPreference} </p>
 
             {user?._id === (onebooking.bookedBy?._id || onebooking.bookedBy) ?  (<>
             

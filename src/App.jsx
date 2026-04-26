@@ -4,10 +4,10 @@ import Homepage from './pages/Homepage';
 import SignUp from './pages/Signup';
 import SignIn from './pages/SignIn';
 import Navbar from './components/Navbar';
-import Dashboard from './pages/MyBooking';
 import AllFlights from './pages/AllFlights';
 import SearchFlights from './pages/SearchFlights';
 import BookingDetails from './pages/BookingDetails';
+import MyBooking from './pages/MyBooking';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -32,25 +32,13 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/sign-up" element={!user ? <SignUp /> : <Navigate to='/dashboard'/>} />
-        <Route path="/sign-in" element={!user ? <SignIn setUser={setUser} /> : <Navigate to='/dashboard'/>} />
-        <Route path="/dashboard" element={user ? <Dashboard user={user} /> : <Navigate to='/sign-in'/>} />
+        <Route path="/sign-up" element={!user ? <SignUp /> : <Navigate to='/'/>} />
+        <Route path="/sign-in" element={!user ? <SignIn setUser={setUser} /> : <Navigate to='/'/>} />
+        <Route path="/dashboard" element={user ? <Homepage user={user} /> : <Navigate to='/sign-in'/>} />
         <Route path='/flights' element={<AllFlights/>} />
 
-        <Route
-          path="/sign-up"
-          element={!user ? <SignUp /> : <Navigate to="/dashboard" />}
-        />
+       
 
-        <Route
-          path="/sign-in"
-          element={!user ? <SignIn setUser={setUser} /> : <Navigate to="/dashboard" />}
-        />
-
-        <Route
-          path="/dashboard"
-          element={user ? <Dashboard user={user} /> : <Navigate to="/sign-in" />}
-        />
 
         <Route
           path="/booking"
@@ -61,6 +49,10 @@ function App() {
           path="/filteredFlights"
           element={<SearchFlights user={user} />}
         />
+       <Route 
+            path="/my-bookings" 
+            element={user ? <MyBooking user={user} /> : <Navigate to="/sign-in" />} 
+/> 
       </Routes>
     </div>
   );
