@@ -29,7 +29,6 @@ function App() {
   return (
     <div>
       <Navbar user={user} setUser={setUser} />
-
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/sign-up" element={!user ? <SignUp /> : <Navigate to='/'/>} />
@@ -53,6 +52,8 @@ function App() {
             path="/my-bookings" 
             element={user ? <MyBooking user={user} /> : <Navigate to="/sign-in" />} 
 /> 
+        <Route path="/booking" element={<BookingDetails user={user} />} />
+        <Route path="/filteredFlights" element={<SearchFlights user={user} />} />
       </Routes>
     </div>
   );
