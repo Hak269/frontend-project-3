@@ -9,14 +9,10 @@ const BookingDetails = () => {
   const travellers = location.state?.travellers || { adults: 1 };
 
   const [booking, setBooking] = useState({
-    passengerName: "",
     cabinClass: "EconomyClass",
     mealPreference: "VegetarianMeal",
     flight: selectedFlight,
-    seat: "",
-    isDirectFlight: true,
-    isRoundTrip: false,
-    returnDate: ""
+    seat: ""
   });
 
   const [flights, setFlights] = useState([]);
@@ -54,7 +50,6 @@ const BookingDetails = () => {
 
   const handleSubmit = async () => {
     if (!booking.flight) return alert("Please select a flight");
-    if (!booking.passengerName) return alert("Please enter passenger name");
     if (!booking.seat) return alert("Please enter seat number");
     if (!user) { alert("Please login first"); navigate('/sign-in'); return; }
 
@@ -90,18 +85,6 @@ const BookingDetails = () => {
     <div style={styles.page}>
       <div style={styles.topBar}>
         <h1 style={styles.pageTitle}>flight / booking details</h1>
-        <div style={styles.passengerBox}>
-          <span style={styles.passengerLabel}>Passenger Name</span>
-          <div style={styles.passengerInput}>
-            <input
-              name="passengerName"
-              value={booking.passengerName}
-              onChange={handleChange}
-              placeholder="Full name"
-              style={styles.nameInput}
-            />
-          </div>
-        </div>
       </div>
 
       {booking.flight && (
@@ -148,35 +131,6 @@ const BookingDetails = () => {
           </div>
 
           <div style={styles.rightCol}>
-            <div style={styles.rightField}>
-              <span style={styles.rightLabel}>Is Direct Flight</span>
-              <select name="isDirectFlight" value={booking.isDirectFlight} onChange={handleChange} style={styles.rightSelect}>
-                <option value="true">Yes</option>
-                <option value="false">No</option>
-              </select>
-            </div>
-
-            <div style={styles.rightField}>
-              <span style={styles.rightLabel}>Trip Type</span>
-              <select name="isRoundTrip" value={booking.isRoundTrip} onChange={handleChange} style={styles.rightSelect}>
-                <option value="false">One Way</option>
-                <option value="true">Round Trip</option>
-              </select>
-            </div>
-
-            {booking.isRoundTrip && (
-              <div style={styles.rightField}>
-                <span style={styles.rightLabel}>Return Date</span>
-                <input
-                  type="date"
-                  name="returnDate"
-                  value={booking.returnDate}
-                  onChange={handleChange}
-                  style={styles.rightSelect}
-                />
-              </div>
-            )}
-
             <div style={styles.totalPrice}>
               <span>Total Price :</span>
               <span style={styles.priceBox}>
