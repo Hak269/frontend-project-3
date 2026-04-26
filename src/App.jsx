@@ -8,6 +8,7 @@ import Dashboard from './pages/MyBooking';
 import AllFlights from './pages/AllFlights';
 import SearchFlights from './pages/SearchFlights';
 import BookingDetails from './pages/BookingDetails';
+import MyBooking from './pages/MyBooking';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -61,7 +62,12 @@ function App() {
           path="/filteredFlights"
           element={<SearchFlights user={user} />}
         />
+        <Route 
+  path="/my-bookings" 
+  element={user ? <MyBooking user={user} /> : <Navigate to="/sign-in" />} 
+/> 
       </Routes>
+      
     </div>
   );
 }
